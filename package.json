@@ -1,5 +1,5 @@
 {
-  "name": "food-ordering-app",
+  "name":"food_ordering_system",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
