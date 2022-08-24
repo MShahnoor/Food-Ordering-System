@@ -1,0 +1,27 @@
+@import "bootstrap/bootstrap";
+@import "metisMenu";
+@import "jquery.mCustomScrollbar";
+@import "index";
+
+@import 'common/main.scss';
+@import 'layouts/horizontal/core/main.scss';
+@import 'layouts/horizontal/menu-type/default.scss';
+// @import 'layouts/horizontal/themes/theme-j.scss';
+@import 'layouts/vertical/core/main.scss';
+@import 'layouts/vertical/menu-type/default.scss';
+// @import 'layouts/vertical/themes/theme-j';
+@import 'vendor/bootstrap';
+@import 'vendor/metismenu/dist/metisMenu';
+@import 'vendor/switchery-npm/index';
+@import 'vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
+
+@import 'icons/line-awesome.min';
+@import 'icons/line-awesome-font-awesome.min';
+@import 'icons/dripicons.min';
+@import 'icons/material-design-iconic-font.min';
+@import 'icons/simple-line-icons';
+
+@import 'vendor/datatables.net-bs4/css/dataTables.bootstrap4';
+@import 'common/main.bundle';
+@import 'layouts/vertical/core/main';
+

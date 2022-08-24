@@ -1,0 +1,8 @@
+//import "./custom"
+//import "./bootstrap.bundle.min"
+//import "./jquery.min"
+//import "./jquery-3.0.0.min"
+import "./owl.carousel.min"
+//import "./popper.min"
+//import "./jquery.mCustomScrollbar.concat.min"
+import "./jquery.easy-autocomplete.min"

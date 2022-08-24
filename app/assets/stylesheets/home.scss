@@ -1,0 +1,53 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+#nav-text-custom span,
+#nav-icons {
+  color: #e2dfd2;
+}
+
+#navbar-container,
+#aside-toolbar,
+#menu-arrow {
+  background-color: #2f2e44;
+}
+#logo_path {
+  fill: #e2dfd2;
+}
+
+#sidemenu-text span,
+.has-arrow::after {
+  color: #788db4;
+  &:hover {
+    color: #736cc7;
+  }
+}
+
+#brand-text {
+  position: absolute;
+  top: -3px;
+  left: 36px;
+  padding: 0;
+  color: #e2dfd2;
+  font-size: 18px;
+}
+
+#cart-icon-round {
+  background-color: rgba(246, 74, 145, 0.4);
+}
+#cart-icon {
+  color: #f64a91;
+}
+
+#graph-bar-round {
+  background-color: rgba(115, 108, 199, 0.4);
+}
+#graph-bar-icon {
+  color: #736cc7;
+}
+
+.row a,
+.mCSB_container a {
+  color: rgb(97, 113, 130);
+}
