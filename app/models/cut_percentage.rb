@@ -1,0 +1,2 @@
+class CutPercentage < ApplicationRecord
+end
