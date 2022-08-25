@@ -1,0 +1,2 @@
+class DealItem < ApplicationRecord
+end
