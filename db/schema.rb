@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_27_193005) do
+ActiveRecord::Schema.define(version: 2022_08_27_200125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(version: 2022_08_27_193005) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "customer_addresses", force: :cascade do |t|
+    t.text "address"
+    t.bigint "customer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_customer_addresses_on_customer_id"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -292,6 +300,7 @@ ActiveRecord::Schema.define(version: 2022_08_27_193005) do
   add_foreign_key "addon_order_items", "addons"
   add_foreign_key "addon_order_items", "order_items"
   add_foreign_key "addons", "restaurants"
+  add_foreign_key "customer_addresses", "customers"
   add_foreign_key "deal_deal_items", "deal_items"
   add_foreign_key "deal_deal_items", "deals"
   add_foreign_key "deal_deal_items", "options"

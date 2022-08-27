@@ -6,4 +6,5 @@ class Customer < ApplicationRecord
   has_many :ratings
   has_many :orders
   has_and_belongs_to_many :promos
+  has_many :customer_addresses
 end
