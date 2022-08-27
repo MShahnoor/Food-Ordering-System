@@ -5,4 +5,5 @@ class Customer < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :ratings
   has_many :orders
+  has_and_belongs_to_many :promos
 end

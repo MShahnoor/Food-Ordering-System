@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_26_152219) do
+ActiveRecord::Schema.define(version: 2022_08_27_102943) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,11 @@ ActiveRecord::Schema.define(version: 2022_08_26_152219) do
     t.datetime "remember_created_at"
     t.index ["email"], name: "index_customers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true
+  end
+
+  create_table "customers_promos", id: false, force: :cascade do |t|
+    t.bigint "customer_id", null: false
+    t.bigint "promo_id", null: false
   end
 
   create_table "cut_percentages", force: :cascade do |t|
@@ -189,11 +194,11 @@ ActiveRecord::Schema.define(version: 2022_08_26_152219) do
 
   create_table "promos", force: :cascade do |t|
     t.string "title"
-    t.string "type"
     t.integer "value"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "promo_type"
   end
 
   create_table "ratings", force: :cascade do |t|
