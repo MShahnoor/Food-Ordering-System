@@ -3,4 +3,6 @@ class OrderItem < ApplicationRecord
   has_and_belongs_to_many :options
   has_many :addon_order_items
   has_many :addons, through: :addon_order_items
+  has_many :order_item_food_items
+  has_many :food_items, through: :order_item_food_items
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_27_202650) do
+ActiveRecord::Schema.define(version: 2022_08_27_203752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -227,6 +227,17 @@ ActiveRecord::Schema.define(version: 2022_08_27_202650) do
     t.index ["order_item_id", "option_id"], name: "index_options_order_items_on_order_item_id_and_option_id"
   end
 
+  create_table "order_item_food_items", force: :cascade do |t|
+    t.bigint "order_item_id", null: false
+    t.integer "deal_id"
+    t.integer "item_group_id"
+    t.bigint "food_item_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["food_item_id"], name: "index_order_item_food_items_on_food_item_id"
+    t.index ["order_item_id"], name: "index_order_item_food_items_on_order_item_id"
+  end
+
   create_table "order_items", force: :cascade do |t|
     t.string "title"
     t.integer "quantity"
@@ -336,6 +347,8 @@ ActiveRecord::Schema.define(version: 2022_08_27_202650) do
   add_foreign_key "menus", "restaurants"
   add_foreign_key "options", "item_groups"
   add_foreign_key "options", "restaurants"
+  add_foreign_key "order_item_food_items", "food_items"
+  add_foreign_key "order_item_food_items", "order_items"
   add_foreign_key "order_items", "orders"
   add_foreign_key "orders", "customers"
   add_foreign_key "orders", "employees"
