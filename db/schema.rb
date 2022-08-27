@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_27_192019) do
+ActiveRecord::Schema.define(version: 2022_08_27_193005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addon_order_items", force: :cascade do |t|
+    t.integer "quantity"
+    t.bigint "order_item_id", null: false
+    t.bigint "addon_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["addon_id"], name: "index_addon_order_items_on_addon_id"
+    t.index ["order_item_id"], name: "index_addon_order_items_on_order_item_id"
+  end
 
   create_table "addons", force: :cascade do |t|
     t.string "title"
@@ -279,6 +289,8 @@ ActiveRecord::Schema.define(version: 2022_08_27_192019) do
     t.index ["order_id"], name: "index_service_charge_payments_on_order_id"
   end
 
+  add_foreign_key "addon_order_items", "addons"
+  add_foreign_key "addon_order_items", "order_items"
   add_foreign_key "addons", "restaurants"
   add_foreign_key "deal_deal_items", "deal_items"
   add_foreign_key "deal_deal_items", "deals"
