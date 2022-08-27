@@ -7,4 +7,5 @@ class Restaurant < ApplicationRecord
   has_many :food_items
   has_many :addons
   has_many :restaurant_payments
+  has_many :restaurant_schedules
 end
