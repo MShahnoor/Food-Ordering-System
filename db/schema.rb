@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_27_184426) do
+ActiveRecord::Schema.define(version: 2022_08_27_185300) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -123,6 +123,16 @@ ActiveRecord::Schema.define(version: 2022_08_27_184426) do
     t.index ["manager_id"], name: "index_employees_on_manager_id"
     t.index ["reset_password_token"], name: "index_employees_on_reset_password_token", unique: true
     t.index ["restaurant_id"], name: "index_employees_on_restaurant_id"
+  end
+
+  create_table "food_item_options", force: :cascade do |t|
+    t.integer "price"
+    t.bigint "food_item_id", null: false
+    t.bigint "option_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["food_item_id"], name: "index_food_item_options_on_food_item_id"
+    t.index ["option_id"], name: "index_food_item_options_on_option_id"
   end
 
   create_table "food_items", force: :cascade do |t|
@@ -268,6 +278,8 @@ ActiveRecord::Schema.define(version: 2022_08_27_184426) do
   add_foreign_key "deal_deal_items", "options"
   add_foreign_key "employees", "employees", column: "manager_id"
   add_foreign_key "employees", "restaurants"
+  add_foreign_key "food_item_options", "food_items"
+  add_foreign_key "food_item_options", "options"
   add_foreign_key "food_items", "discounts"
   add_foreign_key "food_items", "item_groups"
   add_foreign_key "food_items", "restaurants"
