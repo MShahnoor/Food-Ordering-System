@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: MyString
+  menu: one
+  starting_time: 2022-08-28 02:05:37
+  ending_time: 2022-08-28 02:05:37
+
+two:
+  day: MyString
+  menu: two
+  starting_time: 2022-08-28 02:05:37
+  ending_time: 2022-08-28 02:05:37
