@@ -1,4 +1,5 @@
 class FoodItem < ApplicationRecord
+  has_many :deal_items, as: :deal_itemable
   belongs_to :discount
   belongs_to :item_group
   belongs_to :restaurant
