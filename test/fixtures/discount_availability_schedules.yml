@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  discount: one
+  start_date: 2022-08-28 01:26:50
+  end_date: 2022-08-28 01:26:50
+
+two:
+  discount: two
+  start_date: 2022-08-28 01:26:50
+  end_date: 2022-08-28 01:26:50

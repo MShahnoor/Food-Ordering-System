@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  joining_date: 2022-08-24 18:47:50
+
+two:
+  first_name: MyString
+  last_name: MyString
+  joining_date: 2022-08-24 18:47:50

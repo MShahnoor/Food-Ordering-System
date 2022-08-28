@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: MyString
+  restaurant: one
+  opening_time: 2022-08-28 02:08:41
+  closing_time: 2022-08-28 02:08:41
+
+two:
+  day: MyString
+  restaurant: two
+  opening_time: 2022-08-28 02:08:41
+  closing_time: 2022-08-28 02:08:41

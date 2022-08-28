@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_placed: 2022-08-25 11:14:19
+  time_received: 2022-08-25 11:14:19
+  order_status: MyString
+  is_deleted: false
+
+two:
+  time_placed: 2022-08-25 11:14:19
+  time_received: 2022-08-25 11:14:19
+  order_status: MyString
+  is_deleted: false
