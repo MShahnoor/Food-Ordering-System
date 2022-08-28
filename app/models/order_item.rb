@@ -1,4 +1,5 @@
 class OrderItem < ApplicationRecord
+  belongs_to :order_itemable, polymorphic: true # refers to i) food_item ii) deal
   belongs_to :order
   has_and_belongs_to_many :options
   has_many :addon_order_items
