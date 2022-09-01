@@ -1,0 +1,2 @@
+ActiveAdmin.register PromoAvailabilitySchedule do
+end
