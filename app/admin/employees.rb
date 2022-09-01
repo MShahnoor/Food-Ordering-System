@@ -4,4 +4,14 @@ ActiveAdmin.register Employee do
   action_item :view_site do
     link_to "Invite Employee", new_employee_invitation_path
   end
+
+  index do
+    selectable_column
+    column :id
+    column :full_name
+    column :email
+    column :restaurant
+    column :manager
+    actions
+  end
 end
