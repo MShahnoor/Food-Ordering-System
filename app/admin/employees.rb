@@ -33,4 +33,17 @@ ActiveAdmin.register Employee do
     end
     active_admin_comments
   end
+
+  form do |f|
+    inputs "Details" do
+      input :first_name
+      input :last_name
+      input :email
+      input :restaurant
+      input :manager
+      input :joining_date
+      input :password
+      actions
+    end
+  end
 end
