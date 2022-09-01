@@ -8,4 +8,7 @@ ActiveAdmin.register ServiceChargePayment do
       actions
     end
   end
+
+  filter :order_id
+  filter :amount
 end
