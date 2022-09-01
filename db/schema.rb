@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_30_134027) do
+ActiveRecord::Schema.define(version: 2022_09_01_060145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -154,7 +154,6 @@ ActiveRecord::Schema.define(version: 2022_08_30_134027) do
     t.datetime "joining_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "restaurant_id", null: false
     t.bigint "manager_id"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -169,6 +168,7 @@ ActiveRecord::Schema.define(version: 2022_08_30_134027) do
     t.string "invited_by_type"
     t.bigint "invited_by_id"
     t.integer "invitations_count", default: 0
+    t.bigint "restaurant_id"
     t.index ["email"], name: "index_employees_on_email", unique: true
     t.index ["invitation_token"], name: "index_employees_on_invitation_token", unique: true
     t.index ["invited_by_id"], name: "index_employees_on_invited_by_id"
