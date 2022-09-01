@@ -10,4 +10,9 @@ ActiveAdmin.register Rating do
       actions
     end
   end
+
+  filter :order_id
+  filter :customer
+  filter :value
+  filter :description
 end
