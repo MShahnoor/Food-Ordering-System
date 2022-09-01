@@ -46,4 +46,17 @@ ActiveAdmin.register Employee do
       actions
     end
   end
+
+  filter :restaurant
+  filter :subordinates
+  filter :manager
+  filter :orders
+  filter :first_name
+  filter :last_name
+  filter :email
+  filter :joining_date
+  filter :invitation_created_at
+  filter :invitation_created_at
+  filter :invitation_sent_at
+  filter :invitation_accepted_at
 end
