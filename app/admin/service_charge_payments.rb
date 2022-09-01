@@ -1,0 +1,2 @@
+ActiveAdmin.register ServiceChargePayment do
+end
