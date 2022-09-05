@@ -30,16 +30,22 @@
                         <%= addon.is_available ? "Yes": "No" %>
                       <span>
                     </td>
-                    <td>
-                      <div class="icon col-xs-6 col-md-3" >
+                    <td class= "flex-icons">
+                      <div class="icon" >
                         <%= link_to  root_path,class: "tile-primary" do %>
                           <i class="zmdi zmdi-delete zmdi-hc-fw"></i>
                         <% end %>
                       </div>
 
-                      <div class="icon col-xs-6 col-md-3" >
+                      <div class="icon" >
                         <%= link_to  root_path,class: "tile-primary" do %>
                           <i class="zmdi zmdi-edit zmdi-hc-fw"></i>
+                        <% end %>
+                      </div>
+
+                      <div class="icon" >
+                        <%= link_to  root_path,class: "tile-primary" do %>
+                          <i class="zmdi zmdi-open-in-new zmdi-hc-fw"></i>
                         <% end %>
                       </div>
                     </td>
