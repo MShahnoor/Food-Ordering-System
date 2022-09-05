@@ -25,3 +25,13 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.tbl {
+  color: #617182;
+  font: 14px Poppins, sans-serif;
+  padding: 12px 30px 12px 12px;
+
+  th {
+    font-weight: 600 !important;
+  }
+}
