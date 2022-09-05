@@ -6,4 +6,8 @@ class AddonsController < ApplicationController
   def show
     @addon = Addon.find(params[:id])
   end
+
+  def new
+    @addon = Addon.new
+  end
 end
