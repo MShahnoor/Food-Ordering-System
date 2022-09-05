@@ -14,3 +14,14 @@
  *= require_self
  */
 @import "dashboard/dashboard";
+
+.icon {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.flex-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
