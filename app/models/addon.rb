@@ -3,4 +3,6 @@ class Addon < ApplicationRecord
   has_and_belongs_to_many :menu_items
   has_many :addon_order_items
   has_many :order_items, through: :addon_order_items
+
+  validates :title, :price, presence: true
 end
