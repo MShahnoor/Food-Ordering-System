@@ -21,6 +21,20 @@ class AddonsController < ApplicationController
     end
   end
 
+  def edit
+    @addon = Addon.find(params[:id])
+  end
+
+  def update
+    @addon = Addon.find(params[:id])
+
+    if @addon.update(addon_params)
+      redirect_to addons_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def destroy
     @addon = Addon.find(params[:id])
     @addon.destroy
