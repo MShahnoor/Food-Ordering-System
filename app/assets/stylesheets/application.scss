@@ -35,3 +35,10 @@
     font-weight: 600 !important;
   }
 }
+
+.form-control {
+  border-color: #dfe7f3 !important;
+  &:hover {
+    border-color: #736cc7 !important;
+  }
+}
