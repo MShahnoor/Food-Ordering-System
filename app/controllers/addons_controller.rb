@@ -13,7 +13,7 @@ class AddonsController < ApplicationController
 
   def create
     @addon = Addon.new(addon_params)
-    if @addon.save!
+    if @addon.save
       flash[:notice] = "Created Addon!"
       redirect_to addons_path
     else
@@ -29,6 +29,7 @@ class AddonsController < ApplicationController
     @addon = Addon.find(params[:id])
 
     if @addon.update(addon_params)
+      flash[:notice] = "Updated Addon!"
       redirect_to addons_path
     else
       render :edit, status: :unprocessable_entity
@@ -38,7 +39,7 @@ class AddonsController < ApplicationController
   def destroy
     @addon = Addon.find(params[:id])
     @addon.destroy
-
+    flash[:alert] = "#{@addon.title} deleted"
     redirect_to addons_path
   end
 
