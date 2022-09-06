@@ -10,4 +10,10 @@ class AddonsController < ApplicationController
   def new
     @addon = Addon.new
   end
+
+  private
+
+  def addon_params
+    params.require(:addon).permit(:title, :price, :is_available,:restaurant_id)
+  end
 end
