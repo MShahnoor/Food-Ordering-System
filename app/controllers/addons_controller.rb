@@ -11,6 +11,16 @@ class AddonsController < ApplicationController
     @addon = Addon.new
   end
 
+  def create
+    @addon = Addon.new(addon_params)
+    if @addon.save!
+      flash[:notice] = "Created Addon!"
+      redirect_to addons_path
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def addon_params
