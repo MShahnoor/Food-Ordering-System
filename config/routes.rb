@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :employees
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
+  devise_for :employees, controllers: { invitations: 'employees/invitations' }
   devise_for :customers
-  devise_for :admins
   resources :addons
   root 'home#index'
   get 'home/index'
