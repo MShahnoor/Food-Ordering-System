@@ -21,6 +21,13 @@ class AddonsController < ApplicationController
     end
   end
 
+  def destroy
+    @addon = Addon.find(params[:id])
+    @addon.destroy
+
+    redirect_to addons_path
+  end
+
   private
 
   def addon_params
