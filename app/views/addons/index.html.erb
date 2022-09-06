@@ -49,7 +49,7 @@
                       </div>
 
                       <div class="icon" >
-                        <%= link_to  root_path,class: "tile-primary" do %>
+                        <%= link_to  addon_path(addon),method: :delete,class: "tile-primary",data: {confirm: 'Are you sure?'} do %>
                           <i class="zmdi zmdi-delete zmdi-hc-fw"></i>
                         <% end %>
                       </div>
