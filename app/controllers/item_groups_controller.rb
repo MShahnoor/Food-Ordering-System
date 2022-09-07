@@ -22,6 +22,21 @@ class ItemGroupsController < ApplicationController
     end
   end
 
+  def edit
+    @item_group = ItemGroup.find(params[:id])
+  end
+
+  def update
+    @item_group = ItemGroup.find(params[:id])
+
+    if @item_group.update(item_group_params)
+      flash[:notice] = "Updated Item Group!"
+      redirect_to item_groups_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   def item_group_params
     params.require(:item_group).permit(:title, :is_available, :restaurant_id)
   end
