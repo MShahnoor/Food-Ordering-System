@@ -1,0 +1,21 @@
+<% if notice %>
+	<div class="card-body">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <%= notice.titleize %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true" class="la la-close"></span>
+      </button>
+    </div>
+<% end %>
+
+<% if alert %>
+
+<div class="card-body">
+    <div class="alert alert-secondary alert-dismissible fade show" role="alert">
+      <%= alert.titleize %>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true" class="la la-close"></span>
+      </button>
+    </div>
+    </div>
+<% end %>

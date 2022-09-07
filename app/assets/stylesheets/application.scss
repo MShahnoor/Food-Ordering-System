@@ -14,3 +14,36 @@
  *= require_self
  */
 @import "dashboard/dashboard";
+
+.icon {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.flex-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.tbl {
+  color: #617182;
+  font: 14px Poppins, sans-serif;
+  padding: 12px 30px 12px 12px;
+
+  th {
+    font-weight: 600 !important;
+  }
+}
+
+.form-control {
+  border-color: #dfe7f3 !important;
+  &:hover {
+    border-color: #736cc7 !important;
+  }
+}
+
+.btn-prime {
+  align-self: flex-end;
+  font-weight: 600 !important;
+}
