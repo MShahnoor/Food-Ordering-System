@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   resources :addons
   root 'home#index'
   get 'home/index'
+  resources :item_groups
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
