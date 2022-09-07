@@ -28,11 +28,13 @@
                     <td><%= i %></td>
                     <td><%= item_group.title.titleize %></td>
                     <td><%= item_group.food_items.count %></td>
+
                     <td>
                       <span class="<%= item_group.is_available ? 'badge badge-primary': "badge badge-secondary" %>">
                         <%= item_group.is_available ? "Yes": "No" %>
                       <span>
                     </td>
+
                     <td class= "flex-icons">
                       <div class="icon" >
                         <%= link_to  item_group_path(item_group),class: "tile-primary" do %>
@@ -47,7 +49,7 @@
                       </div>
 
                       <div class="icon" >
-                        <%= link_to  addon_path(item_group),method: :delete,class: "tile-primary",data: {confirm: 'Are you sure?'} do %>
+                        <%= link_to  item_group_path(item_group),method: :delete,class: "tile-primary",data: {confirm: 'Are you sure?'} do %>
                           <i class="zmdi zmdi-delete zmdi-hc-fw"></i>
                         <% end %>
                       </div>
