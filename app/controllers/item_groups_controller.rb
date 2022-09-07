@@ -37,6 +37,13 @@ class ItemGroupsController < ApplicationController
     end
   end
 
+  def destroy
+    @item_group = ItemGroup.find(params[:id])
+    @item_group.destroy
+    flash[:alert] = "Deleted category named #{@item_group.title} "
+    redirect_to item_groups_path
+  end
+
   def item_group_params
     params.require(:item_group).permit(:title, :is_available, :restaurant_id)
   end
