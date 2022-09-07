@@ -1,0 +1,2 @@
+class ItemGroupsContrller < ApplicationController
+end
